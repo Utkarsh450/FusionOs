@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Windows 11 UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .icon img {
+        width: 36px;
+        height: 36px;
+      }
+    </style>
+  </head>
+  <body>
+   <div class="loader w-full z-50 overflow-hidden h-full flex justify-center items-center bg-black">
+  <div class="flex gap-4">
+    <i class="ri-apple-fill glow-animation text-5xl text-zinc-100"></i>
+    <!-- <h1 class="font-medium glow-animation text-zinc-100 mt-1 text-3xl">+</h1> -->
+    <!-- <i class="ri-windows-fill glow-animation text-5xl text-zinc-100"></i> -->
+  </div>
+</div>
+
+    <div
+      class="main hidden h-screen relative w-screen overflow-hidden bg-cover bg-center pb-16"
+      style="
+        background-image: url('./Windows-11-Dark-Blue-4K-Wallpaper-768x432-png-Picsart-AiImageEnhancer.webp');
+      "
+    >
+      <div class="overlay absolute inset-0 z-0"></div>
+
+      <!-- Desktop Icons -->
+      <div
+        class="folders absolute top-0 left-0 hidden max-w-5xl w-full h-[600px] rounded-xl shadow-2xl bg-zinc-900 overflow-hidden border border-zinc-700"
+      >
+        <!-- Top Bar -->
+        <div class="bg-zinc-800 h-10 flex items-center p-2 space-x-2">
+          <div class="btn11 w-3 h-3 bg-red-500 rounded-full shadow-md"></div>
+          <div class="btn12 w-3 h-3 bg-yellow-400 rounded-full shadow-md"></div>
+          <div class="btn13 w-3 h-3 bg-green-500 rounded-full shadow-md"></div>
+        </div>
+        <div class="flex flex-col md:flex-row h-[calc(100%-2.5rem)]">
+          <!-- Sidebar -->
+          <div
+            class="w-full md:w-1/4 bg-zinc-800 border-r border-zinc-700 p-4 text-zinc-200"
+          >
+            <div
+              class="text-xs uppercase tracking-wider text-zinc-400 mb-4 font-semibold"
+            >
+              Favorites
+            </div>
+            <div class="space-y-2 text-sm font-medium">
+              <div
+                class="cursor-pointer px-3 py-2 rounded-md bg-blue-600 text-white transition-all hover:bg-blue-700"
+              >
+                Recents
+              </div>
+              <div
+                class="cursor-pointer px-3 py-2 rounded-md hover:bg-zinc-700 transition-all"
+              >
+                Applications
+              </div>
+              <div
+                class="cursor-pointer px-3 py-2 rounded-md hover:bg-zinc-700 transition-all"
+              >
+                Documents
+              </div>
+              <div
+                class="cursor-pointer px-3 py-2 rounded-md hover:bg-zinc-700 transition-all"
+              >
+                Downloads
+              </div>
+              <div
+                class="cursor-pointer px-3 py-2 rounded-md hover:bg-zinc-700 transition-all"
+              >
+                Pictures
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div
+            class="flex-1 p-6 bg-zinc-900 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center text-xs text-zinc-200"
+          >
+            <div
+              class="flex flex-col items-center hover:scale-105 transition-transform duration-200"
+            >
+              <div
+                class="w-14 h-14 bg-blue-500 rounded-lg flex items-center justify-center text-xl shadow-md"
+              >
+                📁
+              </div>
+              <div class="mt-2">My Projects</div>
+            </div>
+            <div
+              class="flex flex-col items-center hover:scale-105 transition-transform duration-200"
+            >
+              <div
+                class="w-14 h-14 bg-green-500 rounded-lg flex items-center justify-center text-xl shadow-md"
+              >
+                🖼️
+              </div>
+              <div class="mt-2">Photos</div>
+            </div>
+            <div
+              class="flex flex-col items-center hover:scale-105 transition-transform duration-200"
+            >
+              <div
+                class="w-14 h-14 bg-purple-500 rounded-lg flex items-center justify-center text-xl shadow-md"
+              >
+                🎵
+              </div>
+              <div class="mt-2">Music</div>
+            </div>
+            <div
+              class="flex flex-col items-center hover:scale-105 transition-transform duration-200"
+            >
+              <div
+                class="w-14 h-14 bg-red-500 rounded-lg flex items-center justify-center text-xl shadow-md"
+              >
+                🎬
+              </div>
+              <div class="mt-2">Videos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="notes w-[48rem] h-[32rem] absolute rounded-xl hidden overflow-hidden shadow-2xl border border-zinc-700 bg-zinc-900/80 backdrop-blur-md text-white flex flex-col"
+      >
+        <!-- Titlebar with Mac buttons -->
+        <div
+          class="h-10 flex items-center px-4 border-b border-zinc-700 bg-zinc-800/50 backdrop-blur-md"
+        >
+          <div class="flex space-x-2">
+            <div
+              class="mac10 w-3 h-3 bg-red-500 rounded-full cursor-pointer"
+            ></div>
+            <div
+              class="mac11 w-3 h-3 bg-yellow-400 rounded-full cursor-pointer"
+            ></div>
+            <div
+              class="mac12 w-3 h-3 bg-green-500 rounded-full cursor-pointer"
+            ></div>
+          </div>
+          <div class="ml-4 text-sm text-zinc-300 font-medium">Notes</div>
+        </div>
+
+        <!-- Main content -->
+        <div class="flex flex-1 overflow-hidden">
+          <!-- Sidebar -->
+          <div
+            class="w-1/3 bg-zinc-800/40 border-r border-zinc-700 p-4 overflow-y-auto"
+          >
+            <div class="flex justify-between items-center mb-4">
+              <h2 class="text-lg font-semibold">All Notes</h2>
+              <button
+                class="text-sm px-2 py-1 bg-yellow-400 text-black rounded hover:bg-yellow-300"
+              >
+                +
+              </button>
+            </div>
+
+            <!-- Notes list -->
+            <div class="space-y-3">
+              <div
+                class="p-3 bg-zinc-700/30 rounded hover:bg-zinc-600/30 transition cursor-pointer"
+              >
+                <h3 class="font-medium">Shopping List</h3>
+                <p class="text-sm text-zinc-300 line-clamp-2">
+                  Buy eggs, bread, coffee, oat milk...
+                </p>
+              </div>
+              <div
+                class="p-3 bg-zinc-700/30 rounded hover:bg-zinc-600/30 transition cursor-pointer"
+              >
+                <h3 class="font-medium">Web App Idea</h3>
+                <p class="text-sm text-zinc-300 line-clamp-2">
+                  An AI-powered planner with timeline view...
+                </p>
+              </div>
+              <div
+                class="p-3 bg-zinc-700/30 rounded hover:bg-zinc-600/30 transition cursor-pointer"
+              >
+                <h3 class="font-medium">Script Ideas</h3>
+                <p class="text-sm text-zinc-300 line-clamp-2">
+                  Elevator horror, silent thriller in the metro...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Note Preview -->
+          <div class="w-2/3 p-6 overflow-y-auto">
+            <h2 class="text-2xl font-bold mb-3">Shopping List</h2>
+            <ul class="list-disc pl-5 text-zinc-300 space-y-1">
+              <li>Eggs (dozen)</li>
+              <li>Brown Bread</li>
+              <li>Oat Milk</li>
+              <li>Coffee beans</li>
+              <li>Dark chocolate</li>
+              <li>Almond butter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="hacking hidden w-[48rem] h-[26rem] absolute top-10 left-44 rounded-md backdrop-blur-3xl bg-black/70 text-white font-mono shadow-lg border border-gray-600"
+      >
+        <!-- Header Bar -->
+        <div
+          class="flex items-center justify-start space-x-2 px-4 py-2 bg-black/40 rounded-t-md"
+        >
+          <div
+            class="mac7 w-3 h-3 cursor-pointer bg-red-500 rounded-full"
+          ></div>
+          <div
+            class="mac8 w-3 h-3 cursor-pointer bg-yellow-500 rounded-full"
+          ></div>
+          <div
+            class="mac9 w-3 h-3 cursor-pointer bg-green-500 rounded-full"
+          ></div>
+          <span class="ml-4 text-sm text-gray-300 flex justify-center"
+            >Terminal</span
+          >
+        </div>
+
+        <!-- Terminal Body -->
+        <div class="p-4">
+          <p class="date1 text-sm text-gray-300">Last login:</p>
+          <div class="flex items-center space-x-2 mt-2">
+            <span class="text-white">nj-wenjun-y-mac:~ harsh$</span>
+            <input
+              type="text"
+              class="bg-transparent outline-none flex-1 text-white placeholder-gray-500"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="folder hidden absolute top-28 left-60 w-[48rem] h-[26rem] rounded-xl bg-zinc-800/80 backdrop-blur-2xl text-white shadow-2xl border border-zinc-700 overflow-hidden"
+      >
+        <!-- Top Bar -->
+        <div
+          class="flex items-center h-10 px-4 bg-zinc-900/40 backdrop-blur-md border-b border-zinc-700"
+        >
+          <div class="flex gap-2">
+            <div
+              class="mac4 w-3 h-3 bg-red-500 rounded-full cursor-pointer"
+            ></div>
+            <div
+              class="mac5 w-3 h-3 bg-yellow-400 rounded-full cursor-pointer"
+            ></div>
+            <div
+              class="mac6 w-3 h-3 bg-green-500 rounded-full cursor-pointer"
+            ></div>
+          </div>
+          <span class="ml-4 text-sm text-gray-300 font-medium">My Folder</span>
+        </div>
+
+        <!-- Folder Content -->
+        <div
+          class="p-4 grid grid-cols-6 gap-4 h-[calc(100%-2.5rem)] overflow-y-auto"
+        >
+          <!-- Folder 1 -->
+          <div
+            class="flex flex-col items-center text-center text-sm space-y-1 hover:bg-white/10 p-2 rounded cursor-pointer"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/716/716784.png"
+              class="w-12 h-12"
+            />
+            <span>Work</span>
+          </div>
+          <!-- Folder 2 -->
+          <div
+            class="flex flex-col items-center text-center text-sm space-y-1 hover:bg-white/10 p-2 rounded cursor-pointer"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/716/716784.png"
+              class="w-12 h-12"
+            />
+            <span>Photos</span>
+          </div>
+          <!-- Folder 3 -->
+          <div
+            class="flex flex-col items-center text-center text-sm space-y-1 hover:bg-white/10 p-2 rounded cursor-pointer"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/716/716784.png"
+              class="w-12 h-12"
+            />
+            <span>Docs</span>
+          </div>
+          <!-- Folder 4 -->
+          <div
+            class="flex flex-col items-center text-center text-sm space-y-1 hover:bg-white/10 p-2 rounded cursor-pointer"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/716/716784.png"
+              class="w-12 h-12"
+            />
+            <span>Movies</span>
+          </div>
+          <!-- Folder 5 -->
+          <div
+            class="flex flex-col items-center text-center text-sm space-y-1 hover:bg-white/10 p-2 rounded cursor-pointer"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/716/716784.png"
+              class="w-12 h-12"
+            />
+            <span>Downloads</span>
+          </div>
+          <!-- Folder 6 -->
+          <div
+            class="flex flex-col items-center text-center text-sm space-y-1 hover:bg-white/10 p-2 rounded cursor-pointer"
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/716/716784.png"
+              class="w-12 h-12"
+            />
+            <span>Private</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="tab absolute hidden top-24 left-52 w-[46rem] h-[26rem] backdrop-blur-3xl rounded bg-zinc-800/80 text-white overflow-hidden shadow-lg"
+      >
+        <!-- Top Bar -->
+        <div
+          class="w-full h-14 backdrop-blur-3xl bg-zinc-900/40 flex items-center gap-4 px-4"
+        >
+          <div
+            class="mac1 w-4 h-4 rounded-full bg-red-500 cursor-pointer"
+          ></div>
+          <div
+            class="mac2 w-4 h-4 rounded-full bg-yellow-500 cursor-pointer"
+          ></div>
+          <div
+            class="mac3 w-4 h-4 rounded-full bg-green-500 cursor-pointer"
+          ></div>
+          <div class="ml-4 text-sm text-gray-300">This Mac</div>
+        </div>
+
+        <div class="flex h-[calc(100%-3.5rem)]">
+          <!-- Sidebar -->
+          <aside
+            class="w-44 bg-zinc-900/40 p-3 text-sm border-r border-zinc-700 space-y-2"
+          >
+            <div class="text-gray-400 font-semibold">Favorites</div>
+            <ul class="space-y-1 mt-1 text-gray-300">
+              <li class="hover:bg-zinc-700/50 px-2 py-1 rounded cursor-pointer">
+                AirDrop
+              </li>
+              <li class="hover:bg-zinc-700/50 px-2 py-1 rounded cursor-pointer">
+                Applications
+              </li>
+              <li class="hover:bg-zinc-700/50 px-2 py-1 rounded cursor-pointer">
+                Documents
+              </li>
+              <li class="hover:bg-zinc-700/50 px-2 py-1 rounded cursor-pointer">
+                Downloads
+              </li>
+              <li class="hover:bg-zinc-700/50 px-2 py-1 rounded cursor-pointer">
+                Desktop
+              </li>
+              <li class="hover:bg-zinc-700/50 px-2 py-1 rounded cursor-pointer">
+                USB Drive
+              </li>
+            </ul>
+          </aside>
+
+          <!-- Main Content -->
+          <main class="flex-1 p-4 overflow-y-auto">
+            <h3 class="text-gray-200 font-semibold mb-4 text-sm">Devices</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-zinc-900/50 border border-zinc-700 rounded p-3">
+                <p class="text-white font-medium">Macintosh HD</p>
+                <p class="text-xs text-gray-400">500 GB • 250 GB free</p>
+              </div>
+              <div class="bg-zinc-900/50 border border-zinc-700 rounded p-3">
+                <p class="text-white font-medium">External USB</p>
+                <p class="text-xs text-gray-400">64 GB • 30 GB free</p>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+
+      <div
+        class="desk h-[48rem] absolute top-4 left-4 flex flex-wrap gap-3 flex-col space-y-4 text-white text-xs"
+      >
+        <div
+          class="icon1 text-center w-12 h-12 shrink-0 cursor-pointer hover:bg-zinc-500/50 hover:scale-110"
+        >
+          <img
+            src="./9e80c50a5802d3b0a7ec66f3fe4ce348_low_res_Finder-removebg-preview.png"
+          />
+          <div>Finder</div>
+        </div>
+        <div
+          class="icon2 text-center w-12 h-12 shrink-0 cursor-pointer hover:bg-zinc-500/50 hover:scale-110"
+        >
+          <img
+            src="./f84242f5800043b070ba425fdfc0fc13_1FMzmzvGJ2-removebg-preview.png"
+          />
+          <div>Mi</div>
+        </div>
+        <div
+          class="icon4 text-center cursor-pointer w-12 h-12 shrink-0 mb-10 hover:bg-zinc-500/50 hover:scale-110"
+        >
+          <img
+            src="./f9615ffd3ba4491111471f609525ce73_low_res_Terminal-removebg-preview.png"
+          />
+          <div>Terminal</div>
+        </div>
+        <div
+          class="icon5 text-center cursor-pointer w-12 h-12 shrink-0 hover:bg-zinc-500/50 hover:scale-110"
+        >
+          <img src="./apple-notes.svg" />
+          <div>Notes</div>
+        </div>
+      </div>
+      <!-- Taskbar -->
+
+      <div
+        class="sidebar1 w-[42rem] h-[45rem] absolute top-16 left-0 transform -translate-x-64 opacity-0 pointer-events-none transition-all duration-300 z-10 backdrop-blur-3xl bg-black/40 rounded-md text-white p-4 overflow-y-auto font-sans"
+      >
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-3 gap-4 h-full">
+          <!-- Left Column -->
+          <div class="space-y-4 col-span-1">
+            <!-- Greeting -->
+            <div>
+              <div class="sidetime text-sm text-gray-300">14 Jan</div>
+              <div class="sidedurationtext-lg font-semibold">Good evening</div>
+            </div>
+
+            <!-- Notifications -->
+            <div class="bg-zinc-900/80 rounded-md p-3">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-yellow-300 font-semibold text-sm"
+                  >🔔 10 Notifications</span
+                >
+                <button class="text-gray-400 hover:text-white text-xs">
+                  ✕
+                </button>
+              </div>
+              <ul class="space-y-2 text-xs text-gray-300">
+                <li>
+                  <span class="text-pink-400">Breaking News • 1h</span><br />
+                  Chennai-bound IndiGo flight declared fuel Mayday, diverted to
+                  Bengaluru...
+                </li>
+                <li>
+                  <span class="text-blue-400">For you • 38m</span><br />
+                  DGCA sends show-cause notice to Air India...
+                </li>
+                <li>
+                  <span class="text-blue-400">For you • 3h</span><br />
+                  Sensex soars 1,046 points on foreign buying...
+                </li>
+              </ul>
+            </div>
+
+            <!-- Weather Widget -->
+            <div class="bg-zinc-900/80 rounded-md p-3">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="sideweather text-lg font-semibold">🌤️ 32°C</div>
+                  <div class="text-xs text-gray-300">
+                    Expect 4 rainy days ahead starting Tomorrow.
+                  </div>
+                </div>
+                <button
+                  class="bg-gray-700 text-xs px-2 py-1 rounded mt-2 hover:bg-gray-600"
+                >
+                  See full forecast
+                </button>
+              </div>
+            </div>
+
+            <!-- Cricket Score -->
+            <div class="bg-zinc-900/80 rounded-md p-3 text-xs">
+              <div class="mb-2 font-semibold text-white">🏏 ICC</div>
+              <div class="space-y-1 text-gray-300">
+                <div>
+                  ENG 121/1 <span class="text-green-400">LIVE</span> vs IND 471
+                </div>
+                <div>ENG trail by 350 runs</div>
+                <div>WI 193/5 vs PAK 159</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Middle Column -->
+          <div class="space-y-4 col-span-1">
+            <!-- Tabs and Refresh -->
+            <div
+              class="flex justify-between items-center text-sm text-gray-300"
+            >
+              <div class="space-x-4">
+                <span class="text-white font-semibold underline">Discover</span>
+                <span>Following</span>
+                <span>Watch</span>
+                <span>Play</span>
+              </div>
+              <button
+                class="bg-blue-600 px-3 py-1 rounded text-xs hover:bg-blue-500"
+              >
+                🔄 Refresh stories
+              </button>
+            </div>
+
+            <!-- Main Story -->
+            <div class="bg-zinc-900/80 rounded-md overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1121&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="w-full object-cover h-36"
+              />
+              <div class="p-3 text-sm">
+                <div class="text-gray-400">The Economic Times • 9h</div>
+                <div class="font-semibold mt-1">
+                  Why UK's F-35 still stranded in India, defence sources explain
+                </div>
+                <div class="mt-2 text-xs text-gray-400 flex gap-4">
+                  <span>💬 11</span><span>❤️</span><span>↗️</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Story -->
+            <div class="bg-zinc-900/80 rounded-md overflow-hidden">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683121800585-22bb2ea26583?q=80&w=1098&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="w-full object-cover h-28"
+              />
+              <div class="p-3 text-sm">
+                <div class="text-gray-400">The Times of India • 4w</div>
+                <div class="font-semibold mt-1">
+                  5 best anime series to watch on Netflix
+                </div>
+                <div class="mt-2 text-xs text-gray-400 flex gap-4">
+                  <span>❤️ 1k</span><span>💬 1</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="space-y-4 col-span-1">
+            <!-- Microsoft PC Manager -->
+            <div class="bg-zinc-900/80 rounded-md flex p-3 gap-3 items-center">
+              <img
+                src="https://images.unsplash.com/photo-1517999349371-c43520457b23?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="w-20 h-20 rounded object-cover"
+              />
+              <div>
+                <div class="text-sm font-semibold">
+                  Clean your system and free up space with Microsoft PC Manager
+                </div>
+                <button
+                  class="text-xs mt-2 px-2 py-1 bg-blue-600 rounded hover:bg-blue-500"
+                >
+                  Try Now
+                </button>
+              </div>
+            </div>
+
+            <!-- More content / See More -->
+            <div class="bg-zinc-900/80 rounded-md p-3 text-center">
+              <button class="text-blue-400 text-sm hover:underline">
+                See more
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sidebar fixed bottom-0 left-0 w-full h-14 backdrop-blur-3xl text-white flex items-center justify-between px-4 z-50"
+      >
+        <div>
+          <h1>🌤️ 31°C</h1>
+        </div>
+
+        <!-- Left Taskbar Items -->
+
+        <div class="place flex gap-44">
+          <div class="flex items-center gap-4">
+            <div class="start flex items-center space-x-2">
+              <img
+                src="https://img.icons8.com/fluency/32/windows-11.png"
+                class="w-8 h-8 transition-transform hover:scale-125 cursor-pointer"
+              />
+              <input
+                type="text"
+                placeholder="Search"
+                class="bg-gray-800 text-sm text-white px-3 py-1 rounded-full border border-zinc-50 border-[0.001rem] outline-none placeholder-gray-400 w-48"
+              />
+            </div>
+
+            <!-- Center Taskbar Icons -->
+            <!-- Center Taskbar Icons -->
+            <div
+              class="h-full backdrop-blur-3xl bg-zinc-100/15 rounded-2xl p-1"
+            >
+              <div class="flex items-center space-x-4">
+                <!-- Postman -->
+                <a href="https://www.postman.com/" target="_hi">
+                  <img
+                    class="w-10 h-10 transition-transform hover:scale-125 transition-transform cursor-pointer"
+                    src="https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/863f6707a09c7d25c2e37fb570b25acf_low_res_Postman.png"
+                    title="Postman"
+                  />
+                </a>
+
+                <!-- Edge -->
+                <a href="https://MicrosoftEdge.com" target="_hi">
+                  <img
+                    class="w-10 h-10 transition-transform hover:scale-125 transition-transform cursor-pointer"
+                    src="https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/a33ac1ea05fc56422a415b80a32eba26_S0o3vofJSw.png"
+                    title="Edge"
+                  />
+                </a>
+
+                <!-- File Upload -->
+                <label class="cursor-pointer relative">
+                  <div class="transition-transform hover:scale-125">
+                    <input
+                      type="file"
+                      class="absolute inset-0 opacity-0 cursor-pointer"
+                    />
+                    <img
+                      class="w-10 h-10 cursor-pointer"
+                      src="./f84242f5800043b070ba425fdfc0fc13_1FMzmzvGJ2-removebg-preview.png"
+                      title="Upload File"
+                    />
+                  </div>
+                </label>
+
+                <!-- Chrome -->
+                <a href="https://chrome.com" target="_hi">
+                  <img
+                    class="w-10 h-10 transition-transform hover:scale-125 transition-transform cursor-pointer"
+                    src="https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/ca94829514939d7c5cc2c62056c5a6fc_low_res_Chrome_Liquid_Glass.png"
+                    title="Chrome"
+                  />
+                </a>
+
+                <!-- Brave -->
+                <a href="https://search.brave.com/" target="_hi">
+                  <img
+                    class="w-10 h-10 transition-transform hover:scale-125 transition-transform cursor-pointer"
+                    src="https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/f42361de44ee03ea47ed5ea432d33997_low_res_Brave_Browser.png"
+                    title="Brave"
+                  />
+                </a>
+
+                <!-- VS Code -->
+                <a href="#">
+                  <img
+                    class="w-10 h-10 transition-transform hover:scale-125 transition-transform cursor-pointer"
+                    src="https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/eb454471770de82ad9e80c8007bb54f6_low_res_VSCode.png"
+                    title="VS Code"
+                  />
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/" target="_hi">
+                  <img
+                    class="w-10 h-10 transition-transform hover:scale-125 transition-transform cursor-pointer"
+                    src="https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/dac70f04a87a118fae956904f5c8e5ca_low_res_GitHub.png"
+                    title="GitHub"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Taskbar Items -->
+          <!-- Right Taskbar Items -->
+          <div
+            class="hidden1 flex items-center gap-3 text-[11px] text-white font-medium"
+          >
+            <!-- Upward Arrow (Hidden Icons) -->
+            <img
+              src=" https://img.icons8.com/ios-glyphs/16/ffffff/collapse-arrow.png"
+              class="w-4 h-4 hover:bg-zinc-600"
+              alt="Hidden icons"
+            />
+
+            <!-- Language -->
+            <div
+              class="flex flex-col items-end hover:bg-zinc-600 leading-tight"
+            >
+              <span>ENG</span>
+              <span class="text-gray-300 -mt-1">IN</span>
+            </div>
+
+            <!-- Icons: Wi-Fi, Volume, Battery -->
+
+            <div
+              class="wifi w-96 h-96 absolute bottom-0 right-0 translate-y-96 bg-zinc-800 duration-300 transition-all ease-in-out rounded flex flex-col justify-between"
+            >
+              <!-- First Row -->
+              <div class="flex flex-col gap-8 text-white p-6">
+                <div class="flex gap-4">
+                  <div
+                    class="w-24 h-14 rounded bg-zinc-600 flex items-center justify-center text-2xl hover:bg-sky-600"
+                  >
+                    <i class="ri-wifi-line"></i>
+                  </div>
+                  <!-- Wi-Fi -->
+                  <div
+                    class="w-24 h-14 rounded bg-zinc-600 flex items-center justify-center text-2xl hover:bg-sky-600"
+                  >
+                    <i class="ri-bluetooth-fill"></i>
+                  </div>
+                  <!-- Bluetooth -->
+                  <div
+                    class="w-24 h-14 rounded bg-zinc-600 flex items-center justify-center text-2xl hover:bg-sky-600"
+                  >
+                    <i class="ri-plane-line"></i>
+                  </div>
+                  <!-- Battery -->
+                </div>
+
+                <!-- Second Row -->
+                <div class="flex gap-4">
+                  <div
+                    class="w-24 h-14 rounded bg-zinc-600 hover:bg-sky-600 flex items-center justify-center text-2xl"
+                  >
+                    <i class="ri-battery-fill"></i>
+                  </div>
+                  <!-- Display -->
+                  <div
+                    class="w-24 h-14 rounded bg-zinc-600 hover:bg-sky-600 flex items-center justify-center text-2xl"
+                  >
+                    <i class="ri-user-fill"></i>
+                  </div>
+                  <!-- Airplane Mode -->
+                  <div
+                    class="w-24 h-14 rounded bg-zinc-600 hover:bg-sky-600 flex items-center justify-center text-2xl"
+                  >
+                    <i class="ri-computer-fill"></i>
+                  </div>
+                  <!-- Lock Rotation -->
+                </div>
+
+                <!-- Brightness Slider -->
+                <div class="flex items-center gap-4">
+                  <span class="text-lg"><i class="ri-sun-line"></i></span>
+                  <input
+                    type="range"
+                    id="brightness"
+                    name="brightness"
+                    class="brightness w-80 accent-sky-500"
+                  />
+                </div>
+
+                <!-- Volume Slider -->
+                <div class="flex items-center gap-4">
+                  <img
+                    src="https://img.icons8.com/ios-filled/24/ffffff/speaker.png"
+                    alt="Speaker Icon"
+                  />
+                  <input
+                    type="range"
+                    id="volume"
+                    name="volume"
+                    min="0"
+                    max="100"
+                    value="50"
+                    class="w-80 accent-sky-500"
+                  />
+                </div>
+              </div>
+
+              <div
+                class="w-full h-10 bg-zinc-900 rounded flex justify-between p-4"
+              >
+                <i
+                  class="battery1 ri-battery-fill text-sm hover:bg-zinc-700 w-14 h-4"
+                >
+                  98%</i
+                >
+                <i class="ri-settings-3-fill text-sm hover:bg-zinc-700"></i>
+              </div>
+            </div>
+
+            <div class="volume p-4 hover:bg-zinc-700 h-fit rounded">
+              <div class="icons flex items-center gap-2">
+                <img
+                  src="https://img.icons8.com/ios-filled/16/ffffff/wifi--v1.png"
+                  class="w-4 h-4"
+                />
+                <img
+                  src="https://img.icons8.com/ios-filled/16/ffffff/speaker.png"
+                  class="w-4 h-4"
+                />
+                <img
+                  class="battery"
+                  src="https://img.icons8.com/ios-filled/16/ffffff/battery--v1.png"
+                  class="w-4 h-4"
+                />
+              </div>
+            </div>
+
+            <!-- Time & Date -->
+            <div
+              class="time hover:bg-zinc-700 p-1 cursor-pointer flex flex-col items-end leading-tight text-[11px]"
+            >
+              <span class="time1">16:44</span>
+              <span class="time2 text-gray-300 -mt-1">20-06-2025</span>
+            </div>
+
+            <!-- Notification Icon -->
+            <img
+              src="https://img.icons8.com/ios-filled/16/ffffff/appointment-reminders--v1.png"
+              class="w-4 h-4"
+              alt="Notifications"
+            />
+          </div>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js"></script>
+      <script src="script.js">
+      </script>
+    </div>
+  </body>
+</html>
