@@ -675,8 +675,11 @@ fetch(
 }
 
 window.addEventListener("load", function(){
+  setTimeout(()=>{
     loader.style.display = "none";
     main.classList.remove("hidden")
+
+  },6000)
 
 })
   gsap();
