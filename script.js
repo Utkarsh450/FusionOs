@@ -679,7 +679,7 @@ window.addEventListener("load", function(){
     loader.style.display = "none";
     main.classList.remove("hidden")
 
-  },3000)
+  },4000)
 
 })
   gsap();
